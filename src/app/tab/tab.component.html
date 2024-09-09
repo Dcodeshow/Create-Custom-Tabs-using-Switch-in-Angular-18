@@ -1,0 +1,51 @@
+<div class="tabs">
+  <ul>
+    <li
+      *ngFor="let tab of tabs"
+      [ngClass]="{ active: selectedTab === tab.id }"
+      (click)="selectTab(tab.id)"
+    >
+      {{ tab.label }}
+    </li>
+  </ul>
+  <div class="tab-content">
+    @switch (selectedTab) { 
+      @case(tabs[0].id)
+      {
+        <ng-container>
+          <h4>Home Section</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
+            reiciendis amet tempora eum ipsam, corrupti necessitatibus placeat
+            deserunt quos ducimus? Sequi quisquam obcaecati facere nesciunt velit
+            qui repudiandae ipsa veniam?
+          </p>
+        </ng-container>
+      }
+      @case(tabs[1].id)
+      {
+        <ng-container>
+          <h4>About Section</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
+            reiciendis amet tempora eum ipsam, corrupti necessitatibus placeat
+            deserunt quos ducimus? Sequi quisquam obcaecati facere nesciunt velit
+            qui repudiandae ipsa veniam?
+          </p>
+        </ng-container>
+      } 
+      @case(tabs[2].id)
+      {
+        <ng-container>
+          <h4>Contact Section</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
+            reiciendis amet tempora eum ipsam, corrupti necessitatibus placeat
+            deserunt quos ducimus? Sequi quisquam obcaecati facere nesciunt velit
+            qui repudiandae ipsa veniam?
+          </p>
+        </ng-container>
+      }  
+  }
+  </div>
+</div>
